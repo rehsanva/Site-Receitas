@@ -62,11 +62,10 @@
      padding: 8px 20px;
      text-decoration: none;
      color: #0B6623;
-     /* Verde Escuro */
+
      font-weight: bold;
      transition: 0.3s;
      background-color: #FFD700;
-     /* Dourado como botão de presente */
      border-radius: 20px;
  }
 
@@ -102,13 +101,13 @@
      font-size: 30px;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      text-align: justify;
-     ~line-height: 1.2;
+     line-height: 1.2;
      margin-left: 20px;
  }
 
 .inicio-container {
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
     gap: 50px;
     margin: 30px auto 0 auto;
@@ -126,6 +125,9 @@
     display: flex;
     max-width: 250px;
     border-radius: 10px;
+    margin: auto 0;
+        height: auto; 
+        margin-right: 0;
 }
 
 h1{
@@ -136,24 +138,16 @@ h1{
      text-align: center;
  
 } 
-h2{
-    
-}
-
  #salgados>h2,
  #doces>h2 {
      color: #F7DDE5;
-     /* Branco Suave para contraste no fundo Vermelho */
      font-size: 2.5em;
      margin-top: 50px;
      margin-bottom: 30px;
      text-align: center;
      border-bottom: 4px solid #FFD700;
-     /* Linha Dourada */
      padding-bottom: 10px;
  }
-
- /* ** CRUCIAL: LAYOUT DE CARDS LADO A LADO ** */
  #salgados,
  #doces {
      display: flex;
@@ -163,23 +157,15 @@ h2{
      padding-top: 0;
  }
 
- /* --- 3. ESTILO DO CARD DE RECEITA (Figma + Natal) --- */
-
  article {
      background-color: #F7DDE5;
-     /* Rosa Suave/Bege - Fundo do card */
      color: #333;
-     /* Texto Escuro */
      padding: 25px;
      border-radius: 15px;
      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
      transition: transform 0.3s;
-
-     /* Configuração para 3 colunas */
      flex: 1 1 calc(33.33% - 20px);
      min-width: 250px;
-
-     /* Borda sutil para dar um toque de presente */
      border: 1px solid #B00020;
  }
 
@@ -187,29 +173,22 @@ h2{
      transform: translateY(-5px);
      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
  }
-
- /* Títulos dentro do Card */
  article h2 {
      color: #B00020;
-     /* Vermelho Escuro */
      font-size: 1.6em;
      margin-top: 0;
      padding-bottom: 8px;
      border-bottom: 2px solid #0B6623;
-     /* Linha Verde Escuro */
      margin-bottom: 15px;
      text-align: left;
  }
 
- /* Subtítulos (Ingredientes, Modo de Preparo) */
  article h3 {
      color: #0B6623;
-     /* Verde Escuro */
      margin-top: 15px;
      margin-bottom: 8px;
      font-size: 1.2em;
      border-left: 5px solid #FFD700;
-     /* Barra Dourada */
      padding-left: 10px;
  }
 
@@ -219,13 +198,11 @@ h2{
      margin-bottom: 15px;
  }
 
- /* --- 4. LISTAS E PASSOS DE PREPARO (Acentos Natalinos) --- */
 
  ul,
  ol {
      padding-left: 20px;
      list-style: none;
-     /* Remove list style padrão */
  }
 
  ul li {
@@ -236,8 +213,6 @@ h2{
  }
 
  ul li::before {
-     content: '✨';
-     /* Brilho Dourado como marcador */
      position: absolute;
      left: 0;
      color: #FFD700;
@@ -253,7 +228,6 @@ h2{
  }
 
  ol li::before {
-     /* Número do passo em Vermelho */
      content: counter(section) ".";
      counter-increment: section;
      position: absolute;
@@ -263,19 +237,13 @@ h2{
      font-size: 1.1em;
  }
 
- /* Resetando o contador para cada nova lista ordenada */
  #salgados,
  #doces {
      counter-reset: section;
  }
  
 
-
- /* --- 5. RESPONSIVIDADE (Para telas menores) --- */
-
  @media (max-width: 1024px) {
-
-     /* 2 cards por linha em telas médias */
      article {
          flex: 1 1 calc(50% - 15px);
          max-width: calc(50% - 15px);
@@ -283,8 +251,6 @@ h2{
  }
 
  @media (max-width: 768px) {
-
-     /* 1 card por linha em telas pequenas */
      article {
          flex: 1 1 100%;
          max-width: 100%;

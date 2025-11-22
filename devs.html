@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conheça os Desenvolvedores</title>
+    <style>
+        body {
+            background-color: #222379;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #792822 0%, #f19393 100%);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin: 40px 0 10px;
+            font-size: 40px;
+            font-weight: 700;
+            color: #e1e1e1;
+        }
+
+        p.subtitulo {
+            color: #ebebeb;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .devs-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 40px;
+            width: 90%;
+            max-width: 1400px;
+            padding-bottom: 60px;
+        }
+
+        .card {
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease;
+            min-height: 580px;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card-header {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            bottom: -70px;
+        }
+
+        .card-body {
+            padding: 110px 25px 25px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .card-body h2 {
+            font-size: 22px;
+            margin-top: 10px;
+            color: #111;
+        }
+
+        .role {
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .bio {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .skills,
+        .contribution {
+            text-align: left;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .skills strong,
+        .contribution strong {
+            color: #000;
+        }
+
+        .links {
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            background-color: #333;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #000;
+        }
+
+    
+
+        .rebeca .card-header {
+            background: linear-gradient(135deg, #ffe57f, #ffb347);
+        }
+
+        .victoria .card-header {
+            background: linear-gradient(135deg, #c6a6ff, #835af1);
+        }
+
+        /* From Uiverse.io by mrhyddenn */
+        .shadow__btn {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            padding: 10px 20px;
+            border: none;
+            font-size: 17px;
+            color: #fff;
+            border-radius: 7px;
+            letter-spacing: 4px;
+            font-weight: 700;
+            transition: 0.5s;
+            transition-property: box-shadow;
+            cursor: pointer;
+            background: rgb(139, 193, 255);
+        }
+
+        .shadow__btn:hover {
+            box-shadow: 0 0 5px rgb(139, 193, 255),
+                0 0 25px rgb(139, 193, 255),
+                0 0 50px rgb(139, 193, 255),
+                0 0 100px rgb(139, 193, 255);
+        }
+
+        @media (min-width: 1201px) {
+            .devs-container {
+                grid-template-columns: repeat(auto-fit, minmax(340px, 400px));
+                justify-content: center;
+            }
+        }
+
+
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .devs-container {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+                margin-top: 80px;
+            }
+
+            p.subtitulo {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+
+            .devs-container {
+                grid-template-columns: 1fr;
+                width: 90%;
+                gap: 25px;
+            }
+
+            .card {
+                min-height: auto;
+            }
+
+            .shadow__btn {
+                position: fixed;
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 8px 15px;
+                font-size: 14px;
+                letter-spacing: 2px;
+                z-index: 1000;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="shadow__btn" onclick="window.location.href='index.html'">Voltar</button>
+    <h1>Conheça os Desenvolvedores</h1>
+    <p class="subtitulo">Equipe responsável pela criação, estilização e organização do projeto</p>
+
+    <section class="devs-container">
+
+       
+            <div class="card rebeca">
+                <div class="card-header">
+                    <img src="IMGCONTATO/REBECA.JPEG" alt="Foto de Rebeca Santos" class="avatar">
+                </div>
+                <div class="card-body">
+                    <h2>Rebeca Santos</h2>
+                    <p class="role">Back-end</p>
+                    <p class="bio">Funcionalidade e estética.</p>
+                    <p class="skills"><strong>Habilidades:</strong> HTML e CSS
+                    </p>
+                    <p class="contribution"><strong>Contribuição:</strong> Desenvolvimento do HTML, colaboração no CSS e
+                        participação na coleta e tratamento das informações apresentadas no site.</p>
+                    <div class="links">
+                        <a href="https://www.linkedin.com/in/rebeca-santos-silva-6ba836387?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank" class="btn">LinkedIn</a>
+                        <a href="https://github.com/rehsanva" target="_blank" class="btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card victoria">
+                <div class="card-header">
+                    <img src="IMGCONTATO/VIC.JPEG" alt="Foto de Victoria Nunes" class="avatar">
+                </div>
+                <div class="card-body">
+                    <h2>Victoria Américo Nunes</h2>
+                    <p class="role">Back-end Developer</p>
+                    <p class="bio">Estrutura do código e organização.</p>
+                    <p class="skills"><strong>Habilidades:</strong> HTML e CSS
+                    </p>
+                    <p class="contribution"><strong>Contribuição:</strong> Desenvolvimento das páginas em HTML e apoio
+                        na organização geral do projeto.</p>
+                    <div class="links">
+                        <a href="https://www.linkedin.com/in/victoria-nunes-0011a6326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank" class="btn">LinkedIn</a>
+                        <a href="https://github.com/victorianuness" target="_blank" class="btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
